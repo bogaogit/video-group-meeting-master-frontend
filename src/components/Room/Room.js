@@ -4,7 +4,7 @@ import socket from '../../socket';
 import VideoCard from '../Video/VideoCard';
 
 const Room = (props) => {
-    const currentUser = sessionStorage.getItem('user');
+    const currentUser = Math.random() + ""
     const [peers, setPeers] = useState([]);
     const [userVideoAudio, setUserVideoAudio] = useState({
         localUser: {video: true, audio: true},
@@ -13,7 +13,7 @@ const Room = (props) => {
     const peersRef = useRef([]);
     const userVideoRef = useRef();
     const userStream = useRef();
-    const roomId = props.match.params.roomId;
+    const roomId = 0;
 
     useEffect(() => {
         // Connect Camera & Mic
